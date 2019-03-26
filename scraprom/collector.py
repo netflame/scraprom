@@ -15,7 +15,7 @@ class PromMixIn:
         """
         update metrics registered by registry
         """
-        gateway = self.crawler.settings.get("SCRAPROM_PUSHGATE_URL", defaults.SCRAPROM_PUSHGATEWAY_URL)
+        gateway = self.crawler.settings.get("SCRAPROM_PUSHGATEWAY_URL", defaults.SCRAPROM_PUSHGATEWAY_URL)
         job = self.crawler.settings.get("SCRAPROM_JOB_NAME", defaults.SCRAPROM_JOB_NAME)
         timeout = self.crawler.settings.get("SCRAPROM_PUSH_TIMEOUT", defaults.SCRAPROM_PUSH_TIMEOUT)
         grouping_key = self._get_grouping_key()
